@@ -1,0 +1,22 @@
+{
+  "name": "ai-code-review-tester",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo monorepo for testing AI code review platforms",
+  "scripts": {
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
