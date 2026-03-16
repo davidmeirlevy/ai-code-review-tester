@@ -4,8 +4,11 @@
   "private": true,
   "description": "Demo monorepo for testing AI code review platforms",
   "scripts": {
+    "dev": "docker compose up -d db && npm run dev:backend & npm run dev:frontend",
     "dev:backend": "cd backend && npm run start:dev",
     "dev:frontend": "cd frontend && npm run dev",
+    "dev:db": "docker compose up -d db",
+    "dev:stop": "docker compose down",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
